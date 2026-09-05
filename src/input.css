@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Ajustes personalizados para el estilo cuero */
+body {
+    background-color: #fafaf9; /* stone-50 */
+}
+
+/* Puedes añadir tipografías de Google Fonts aquí */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.font-heading {
+    font-family: 'Playfair Display', serif;
+}
