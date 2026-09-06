@@ -5,54 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creaciones Rondalia - Artesanías en Cuero</title>
 
-    <!-- ===== FAVICON ===== -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./src/img/logo.svg" />
     <link rel="shortcut icon" href="./favicon.ico" />
 
-    <!-- ===== TAILWIND CSS v4.3.3 ===== -->
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ===== FUENTES GOOGLE ===== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        /* ============================================
-                   ESTILOS GLOBALES
-                   ============================================ */
-        * {
-            font-family: 'Inter', sans-serif;
-        }
+        /* ===== GLOBALES ===== */
+        * { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
 
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
+        /* ===== PALETA ===== */
+        .bg-soft-cream { background-color: #faf6f0; }
+        .text-leather { color: #8B4513; }
+        .bg-leather { background-color: #8B4513; }
+        .border-leather { border-color: #8B4513; }
+        .shadow-warm { box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15); }
 
-        /* ===== PALETA DE COLORES ===== */
-        .bg-soft-cream {
-            background-color: #faf6f0;
-        }
-        .text-leather {
-            color: #8B4513;
-        }
-        .bg-leather {
-            background-color: #8B4513;
-        }
-        .hover-bg-leather:hover {
-            background-color: #6b3410;
-        }
-        .border-leather {
-            border-color: #8B4513;
-        }
-        .shadow-warm {
-            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
-        }
-
-        /* ============================================
-                   CARRUSEL
-                   ============================================ */
+        /* ===== CARRUSEL ===== */
         .carousel-container {
             overflow: hidden;
             position: relative;
@@ -60,17 +37,14 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .carousel-slide {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
-
         .carousel-item {
             min-width: 100%;
             object-fit: cover;
         }
-
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -85,30 +59,16 @@
             transition: all 0.3s;
             z-index: 10;
         }
-
         .carousel-btn:hover {
             background: rgba(139, 69, 19, 1);
             transform: translateY(-50%) scale(1.1);
         }
-
-        .carousel-btn-prev {
-            left: 8px;
-        }
-        .carousel-btn-next {
-            right: 8px;
-        }
-
+        .carousel-btn-prev { left: 8px; }
+        .carousel-btn-next { right: 8px; }
         @media (min-width: 640px) {
-            .carousel-btn {
-                padding: 12px 18px;
-                font-size: 24px;
-            }
-            .carousel-btn-prev {
-                left: 12px;
-            }
-            .carousel-btn-next {
-                right: 12px;
-            }
+            .carousel-btn { padding: 12px 18px; font-size: 24px; }
+            .carousel-btn-prev { left: 12px; }
+            .carousel-btn-next { right: 12px; }
         }
 
         .carousel-indicators {
@@ -117,7 +77,6 @@
             gap: 8px;
             padding: 12px 0;
         }
-
         .carousel-indicator {
             width: 10px;
             height: 10px;
@@ -127,26 +86,12 @@
             transition: all 0.3s;
             border: none;
         }
-
         .carousel-indicator.active {
             background: #8B4513;
             transform: scale(1.2);
         }
 
-        @media (min-width: 640px) {
-            .carousel-indicators {
-                gap: 10px;
-                padding: 15px 0;
-            }
-            .carousel-indicator {
-                width: 12px;
-                height: 12px;
-            }
-        }
-
-        /* ============================================
-                   MODAL
-                   ============================================ */
+        /* ===== MODAL ===== */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -157,11 +102,9 @@
             align-items: center;
             padding: 12px;
         }
-
         .modal-overlay.active {
             display: flex;
         }
-
         .modal-content {
             background: white;
             border-radius: 20px;
@@ -172,24 +115,13 @@
             position: relative;
             animation: modalFade 0.3s ease-out;
         }
-
         @media (min-width: 768px) {
-            .modal-content {
-                max-width: 700px;
-            }
+            .modal-content { max-width: 700px; }
         }
-
         @keyframes modalFade {
-            from {
-                opacity: 0;
-                transform: scale(0.9) translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
+            from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
         }
-
         .modal-close {
             position: absolute;
             top: 12px;
@@ -209,27 +141,20 @@
             justify-content: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
         .modal-close:hover {
             transform: rotate(90deg);
             background: #8B4513;
             color: white;
         }
 
-        /* ============================================
-                   MENÚ MÓVIL
-                   ============================================ */
+        /* ===== MENÚ MÓVIL ===== */
         .mobile-menu {
             display: none;
             flex-direction: column;
             background: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
+        .mobile-menu.active { display: flex; }
         .mobile-menu a {
             padding: 14px 24px;
             border-bottom: 1px solid #f0e8e0;
@@ -238,52 +163,23 @@
             text-decoration: none;
             transition: background 0.3s, color 0.3s;
         }
-
         .mobile-menu a:hover {
             background: #faf6f0;
             color: #8B4513;
         }
 
-        /* ============================================
-                   SECCIONES
-                   ============================================ */
+        /* ===== SECCIONES ===== */
         .section-padding {
             padding: 60px 16px;
         }
-
         @media (min-width: 768px) {
-            .section-padding {
-                padding: 80px 32px;
-            }
+            .section-padding { padding: 80px 32px; }
         }
-
         @media (min-width: 1024px) {
-            .section-padding {
-                padding: 100px 40px;
-            }
+            .section-padding { padding: 100px 40px; }
         }
 
-        /* ============================================
-                   SCROLL SUAVE
-                   ============================================ */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* ============================================
-                   TARJETAS DE PRODUCTOS
-                   ============================================ */
-        .product-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid #f0e8e0;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 
@@ -294,44 +190,30 @@
     ========================================== -->
     <div id="newsModal" class="modal-overlay">
         <div class="modal-content">
-            <!-- Botón cerrar -->
-            <button class="modal-close" onclick="closeModal()" aria-label="Cerrar modal">✕</button>
+            <button class="modal-close" onclick="closeModal()">✕</button>
 
-            <!-- Grid: imagen + texto -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
-                <!-- Imagen -->
                 <div class="h-56 sm:h-64 md:h-auto">
                     <img src="./src/img/tpresentacion.jpeg" alt="Nueva Colección"
                     class="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
                 </div>
 
-                <!-- Texto -->
                 <div class="p-5 sm:p-6 md:p-8 flex flex-col justify-center">
                     <span class="inline-block bg-leather text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 self-start">
                         🔥 NUEVO
                     </span>
-
                     <h3 class="text-xl sm:text-2xl font-display font-bold text-leather">
                         ✨ Colección Primavera-Verano
                     </h3>
-
                     <p class="text-sm sm:text-base text-gray-700 mt-2 leading-relaxed">
                         Descubre nuestra nueva línea de artesanías en cuero.
                         Diseños únicos que combinan tradición y elegancia.
                     </p>
-
                     <div class="flex flex-wrap gap-2 mt-3">
-                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather font-medium">
-                            🏷️ Edición Limitada
-                        </span>
-                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather font-medium">
-                            🎨 Colores Naturales
-                        </span>
-                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather font-medium">
-                            👨‍🎨 Hecho a Mano
-                        </span>
+                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather">🏷️ Edición Limitada</span>
+                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather">🎨 Colores Naturales</span>
+                        <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather">👨‍🎨 Hecho a Mano</span>
                     </div>
-
                     <a href="#catalogo" onclick="closeModal()"
                     class="mt-4 sm:mt-5 bg-leather text-white py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-amber-800 transition-all text-center text-sm sm:text-base shadow-md hover:shadow-lg">
                     📦 Ver Catálogo
@@ -342,12 +224,10 @@
 </div>
 
 <!-- ==========================================
-HEADER / NAVEGACIÓN
+HEADER
 ========================================== -->
 <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-
-        <!-- Logo -->
         <a href="#inicio" class="flex items-center gap-2 sm:gap-3">
             <img src="./src/img/logo.png" alt="Creaciones Rondalia" class="h-10 sm:h-12 w-auto" />
             <span class="text-base sm:text-xl font-display text-leather font-bold hidden sm:inline">
@@ -355,7 +235,6 @@ HEADER / NAVEGACIÓN
             </span>
         </a>
 
-        <!-- Menú Desktop -->
         <div class="hidden md:flex gap-6 lg:gap-8 items-center">
             <a href="#inicio" class="text-gray-700 hover:text-leather font-medium transition-colors">Inicio</a>
             <a href="#catalogo" class="text-gray-700 hover:text-leather font-medium transition-colors">Catálogo</a>
@@ -363,13 +242,9 @@ HEADER / NAVEGACIÓN
             <a href="#contacto" class="text-gray-700 hover:text-leather font-medium transition-colors">Contacto</a>
         </div>
 
-        <!-- Botón menú móvil -->
-        <button id="menuBtn" class="md:hidden text-3xl text-leather p-1" onclick="toggleMenu()" aria-label="Abrir menú">
-            ☰
-        </button>
+        <button id="menuBtn" class="md:hidden text-3xl text-leather p-1" onclick="toggleMenu()">☰</button>
     </nav>
 
-    <!-- Menú Móvil (oculto por defecto) -->
     <div id="mobileMenu" class="mobile-menu">
         <a href="#inicio" onclick="closeMenu()">Inicio</a>
         <a href="#catalogo" onclick="closeMenu()">Catálogo</a>
@@ -383,54 +258,37 @@ SECCIÓN INICIO
 ========================================== -->
 <section id="inicio" class="section-padding pt-24 sm:pt-28 md:pt-32 bg-gradient-to-br from-soft-cream to-white">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-
-        <!-- Texto -->
         <div class="order-2 lg:order-1">
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-leather leading-tight mb-4 md:mb-6">
                 Arte en Cuero <br />
                 <span class="text-amber-800">Hecho con Pasión</span>
             </h1>
-
             <p class="text-gray-700 text-base sm:text-lg mb-6 md:mb-8 leading-relaxed">
                 En <strong>Creaciones Rondalia</strong> transformamos el cuero en piezas únicas que
-                combinan tradición, calidad y diseño contemporáneo. Cada artículo es una obra de arte
-                que realza tu estilo y los ambientes que habitas.
+                combinan tradición, calidad y diseño contemporáneo.
             </p>
-
             <div class="flex flex-wrap gap-3 md:gap-4">
-                <a href="#catalogo"
-                class="px-6 sm:px-8 py-2.5 sm:py-3 bg-leather text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base">
-                Ver Catálogo
-            </a>
-            <a href="#contacto"
-            class="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-leather text-leather rounded-full font-semibold hover:bg-leather hover:text-white transition-all text-sm sm:text-base">
-            Contáctanos
-        </a>
+                <a href="#catalogo" class="px-6 sm:px-8 py-2.5 sm:py-3 bg-leather text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base">
+                    Ver Catálogo
+                </a>
+                <a href="#contacto" class="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-leather text-leather rounded-full font-semibold hover:bg-leather hover:text-white transition-all text-sm sm:text-base">
+                    Contáctanos
+                </a>
+            </div>
+            <div class="flex flex-wrap gap-4 sm:gap-6 mt-6 md:mt-8">
+                <span class="flex items-center gap-2 text-sm text-gray-600"><span class="text-leather text-lg sm:text-xl">✨</span> Calidad Premium</span>
+                <span class="flex items-center gap-2 text-sm text-gray-600"><span class="text-leather text-lg sm:text-xl">🎨</span> Diseños Únicos</span>
+                <span class="flex items-center gap-2 text-sm text-gray-600"><span class="text-leather text-lg sm:text-xl">♻️</span> Hecho a Mano</span>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2 relative">
+            <img src="./src/img/foto1.jpeg" alt="Artesanías en cuero" class="rounded-2xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover" />
+            <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-leather text-white p-3 sm:p-4 rounded-xl shadow-lg">
+                <p class="font-display text-xl sm:text-2xl font-bold">+10 años</p>
+                <p class="text-xs sm:text-sm">de experiencia</p>
+            </div>
+        </div>
     </div>
-
-    <div class="flex flex-wrap gap-4 sm:gap-6 mt-6 md:mt-8">
-        <span class="flex items-center gap-2 text-sm text-gray-600">
-            <span class="text-leather text-lg sm:text-xl">✨</span> Calidad Premium
-        </span>
-        <span class="flex items-center gap-2 text-sm text-gray-600">
-            <span class="text-leather text-lg sm:text-xl">🎨</span> Diseños Únicos
-        </span>
-        <span class="flex items-center gap-2 text-sm text-gray-600">
-            <span class="text-leather text-lg sm:text-xl">♻️</span> Hecho a Mano
-        </span>
-    </div>
-</div>
-
-<!-- Imagen -->
-<div class="order-1 lg:order-2 relative">
-    <img src="./src/img/foto1.jpeg" alt="Artesanías en cuero"
-    class="rounded-2xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover" />
-    <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-leather text-white p-3 sm:p-4 rounded-xl shadow-lg">
-        <p class="font-display text-xl sm:text-2xl font-bold">+10 años</p>
-        <p class="text-xs sm:text-sm">de experiencia</p>
-    </div>
-</div>
-</div>
 </section>
 
 <!-- ==========================================
@@ -438,8 +296,6 @@ SECCIÓN CATÁLOGO
 ========================================== -->
 <section id="catalogo" class="section-padding bg-white">
     <div class="container mx-auto">
-
-        <!-- Título -->
         <div class="text-center mb-8 md:mb-12">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-leather mb-3 md:mb-4">
                 Nuestro Catálogo
@@ -449,40 +305,32 @@ SECCIÓN CATÁLOGO
             </p>
         </div>
 
-        <!-- Carrusel -->
         <div class="carousel-container rounded-2xl shadow-2xl mb-6 md:mb-8">
             <div id="carouselSlide" class="carousel-slide">
-                <img src="./src/img/foto1.jpeg" alt="Producto 1" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
+                <img src="./src/img/foto5.jpeg" alt="Producto 1" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto2.jpeg" alt="Producto 2" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto3.jpeg" alt="Producto 3" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto4.jpeg" alt="Producto 4" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
             </div>
-
-            <!-- Botones -->
-            <button class="carousel-btn carousel-btn-prev" onclick="changeSlide(-1)" aria-label="Anterior">❮</button>
-            <button class="carousel-btn carousel-btn-next" onclick="changeSlide(1)" aria-label="Siguiente">❯</button>
-
-            <!-- Indicadores -->
+            <button class="carousel-btn carousel-btn-prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-btn carousel-btn-next" onclick="changeSlide(1)">❯</button>
             <div class="carousel-indicators" id="indicators">
-                <button class="carousel-indicator active" onclick="goToSlide(0)" aria-label="Ir a slide 1"></button>
-                <button class="carousel-indicator" onclick="goToSlide(1)" aria-label="Ir a slide 2"></button>
-                <button class="carousel-indicator" onclick="goToSlide(2)" aria-label="Ir a slide 3"></button>
-                <button class="carousel-indicator" onclick="goToSlide(3)" aria-label="Ir a slide 4"></button>
+                <button class="carousel-indicator active" onclick="goToSlide(0)"></button>
+                <button class="carousel-indicator" onclick="goToSlide(1)"></button>
+                <button class="carousel-indicator" onclick="goToSlide(2)"></button>
+                <button class="carousel-indicator" onclick="goToSlide(3)"></button>
             </div>
         </div>
 
-        <!-- Botones PDF -->
         <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 md:mt-8">
-            <a href="./src/cueros.pdf" target="_blank"
-            class="px-6 sm:px-8 py-3 sm:py-4 bg-leather text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base">
-            <span>👁️</span> Vista Previa
-        </a>
-        <a href="./src/cueros.pdf" download
-        class="px-6 sm:px-8 py-3 sm:py-4 bg-amber-700 text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base">
-        <span>⬇️</span> Descargar PDF
-    </a>
-</div>
-</div>
+            <a href="./src/cueros.pdf" target="_blank" class="px-6 sm:px-8 py-3 sm:py-4 bg-leather text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base">
+                <span>👁️</span> Vista Previa
+            </a>
+            <a href="./src/cueros.pdf" download class="px-6 sm:px-8 py-3 sm:py-4 bg-amber-700 text-white rounded-full font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base">
+                <span>⬇️</span> Descargar PDF
+            </a>
+        </div>
+    </div>
 </section>
 
 <!-- ==========================================
@@ -490,7 +338,6 @@ SECCIÓN QUIENES SOMOS
 ========================================== -->
 <section id="quienes-somos" class="section-padding bg-soft-cream">
     <div class="container mx-auto">
-
         <div class="text-center mb-8 md:mb-12">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-leather mb-3 md:mb-4">
                 Quienes Somos
@@ -501,7 +348,6 @@ SECCIÓN QUIENES SOMOS
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-
             <!-- Persona 1 -->
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-warm text-center transform transition-all hover:scale-105">
                 <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-amber-200 to-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl sm:text-5xl md:text-6xl">
@@ -535,14 +381,12 @@ SECCIÓN QUIENES SOMOS
                     <span class="px-3 py-1 bg-soft-cream rounded-full text-xs sm:text-sm text-leather">💼 Emprendedor</span>
                 </div>
             </div>
-
         </div>
 
         <div class="text-center mt-8 md:mt-12 max-w-3xl mx-auto px-4">
             <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
                 <span class="text-2xl">❤️</span> Juntos, complementamos nuestras habilidades para ofrecer
-                artesanías en cuero que no solo son funcionales, sino que también cuentan historias
-                y embellecen los espacios de quienes confían en nosotros.
+                artesanías en cuero que no solo son funcionales, sino que también cuentan historias.
             </p>
         </div>
     </div>
@@ -553,7 +397,6 @@ SECCIÓN CONTACTO
 ========================================== -->
 <section id="contacto" class="section-padding bg-white">
     <div class="container mx-auto max-w-4xl">
-
         <div class="text-center mb-8 md:mb-12">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-leather mb-3 md:mb-4">
                 Contáctanos
@@ -565,81 +408,68 @@ SECCIÓN CONTACTO
 
         <div class="bg-soft-cream rounded-3xl p-6 sm:p-8 md:p-12 shadow-warm">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-
-                <!-- Información de contacto -->
                 <div>
                     <h3 class="text-xl sm:text-2xl font-display font-bold text-leather mb-6">Información</h3>
-
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
                             <span class="text-2xl">📧</span>
                             <div>
                                 <p class="font-medium text-gray-700 text-sm sm:text-base">Email</p>
-                                <a href="mailto:creaciones.rondalia@gmail.com"
-                                class="text-leather hover:underline text-sm sm:text-base break-all">
-                                creaciones.rondalia@gmail.com
+                                <a href="mailto:creaciones.rondalia@gmail.com" class="text-leather hover:underline text-sm sm:text-base break-all">
+                                    creaciones.rondalia@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">💬</span>
+                            <div>
+                                <p class="font-medium text-gray-700 text-sm sm:text-base">WhatsApp</p>
+                                <a href="https://wa.me/593993521979" target="_blank" class="text-leather hover:underline text-sm sm:text-base">
+                                    +593 99 352 1979
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <p class="font-medium text-gray-700 mb-4 text-sm sm:text-base">Síguenos en redes sociales</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.facebook.com/creacionesrondalia" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-[#1877f2] text-white rounded-full hover:bg-[#0d65d9] transition-colors text-sm sm:text-base">
+                                <span>📘</span> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/creacionesrondalia" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#f09433] to-[#bc1888] text-white rounded-full hover:opacity-90 transition-opacity text-sm sm:text-base">
+                                <span>📸</span> Instagram
+                            </a>
+                            <a href="https://wa.me/593993521979" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white rounded-full hover:bg-[#1da851] transition-colors text-sm sm:text-base">
+                                <span>💬</span> WhatsApp
                             </a>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <span class="text-2xl">💬</span>
+                </div>
+
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold text-leather mb-6">Envíanos un mensaje</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
                         <div>
-                            <p class="font-medium text-gray-700 text-sm sm:text-base">WhatsApp</p>
-                            <a href="https://wa.me/593993521979" target="_blank"
-                            class="text-leather hover:underline text-sm sm:text-base">
-                            +593 99 352 1979
-                        </a>
-                    </div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Nombre</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base" />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base" />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Mensaje</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-leather text-white rounded-xl font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base">
+                            Enviar Mensaje
+                        </button>
+                    </form>
                 </div>
             </div>
-
-            <div class="mt-8">
-                <p class="font-medium text-gray-700 mb-4 text-sm sm:text-base">Síguenos en redes sociales</p>
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://www.facebook.com/creacionesrondalia" target="_blank"
-                    class="flex items-center gap-2 px-4 py-2 bg-[#1877f2] text-white rounded-full hover:bg-[#0d65d9] transition-colors text-sm sm:text-base">
-                    <span>📘</span> Facebook
-                </a>
-                <a href="https://www.instagram.com/creacionesrondalia" target="_blank"
-                class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#f09433] to-[#bc1888] text-white rounded-full hover:opacity-90 transition-opacity text-sm sm:text-base">
-                <span>📸</span> Instagram
-            </a>
-            <a href="https://wa.me/593993521979" target="_blank"
-            class="flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white rounded-full hover:bg-[#1da851] transition-colors text-sm sm:text-base">
-            <span>💬</span> WhatsApp
-        </a>
+        </div>
     </div>
-</div>
-</div>
-
-<!-- Formulario -->
-<div>
-    <h3 class="text-xl sm:text-2xl font-display font-bold text-leather mb-6">Envíanos un mensaje</h3>
-    <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
-        <div>
-            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Nombre</label>
-            <input type="text" required
-            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base" />
-        </div>
-        <div>
-            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Email</label>
-            <input type="email" required
-            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base" />
-        </div>
-        <div>
-            <label class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Mensaje</label>
-            <textarea rows="4" required
-            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-leather focus:outline-none transition-colors text-sm sm:text-base"></textarea>
-        </div>
-        <button type="submit"
-        class="w-full py-3 bg-leather text-white rounded-xl font-semibold hover:bg-amber-800 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base">
-        Enviar Mensaje
-    </button>
-</form>
-</div>
-</div>
-</div>
-</div>
 </section>
 
 <!-- ==========================================
@@ -650,12 +480,9 @@ FOOTER
         <p class="font-display text-lg sm:text-xl mb-2">Creaciones Rondalia</p>
         <p class="text-gray-400 text-xs sm:text-sm">Artesanías en cuero de calidad | Hecho con ❤️ en Ecuador</p>
         <div class="flex justify-center gap-4 sm:gap-6 mt-4 flex-wrap">
-            <a href="https://www.facebook.com/creacionesrondalia" target="_blank"
-            class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Facebook</a>
-            <a href="https://www.instagram.com/creacionesrondalia" target="_blank"
-            class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Instagram</a>
-            <a href="https://wa.me/593993521979" target="_blank"
-            class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">WhatsApp</a>
+            <a href="https://www.facebook.com/creacionesrondalia" target="_blank" class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Facebook</a>
+            <a href="https://www.instagram.com/creacionesrondalia" target="_blank" class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Instagram</a>
+            <a href="https://wa.me/593993521979" target="_blank" class="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">WhatsApp</a>
         </div>
         <p class="text-gray-500 text-xs mt-4">© 2026 Creaciones Rondalia. Todos los derechos reservados.</p>
     </div>
@@ -742,7 +569,6 @@ JAVASCRIPT
         const slide = document.getElementById('carouselSlide');
         slide.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
 
-        // Actualizar indicadores
         document.querySelectorAll('.carousel-indicator').forEach(function(ind, i) {
             ind.classList.toggle('active', i === currentSlide);
         });
@@ -767,16 +593,13 @@ JAVASCRIPT
         }, 5000);
     }
 
-    // Iniciar auto-play
     resetAutoPlay();
 
-    // Pausar al pasar el mouse
     const carouselContainer = document.querySelector('.carousel-container');
     if (carouselContainer) {
         carouselContainer.addEventListener('mouseenter', function() {
             clearInterval(autoPlayInterval);
         });
-
         carouselContainer.addEventListener('mouseleave', function() {
             resetAutoPlay();
         });
@@ -792,4 +615,26 @@ JAVASCRIPT
     }
 
     // ==========================================
-   
+    // RESALTAR ENLACE ACTIVO
+    // ==========================================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a:not([href="#"])');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        sections.forEach(function(section) {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(function(link) {
+            const href = link.getAttribute('href');
+            link.style.color = (href === '#' + current) ? '#8B4513' : '#374151';
+        });
+    });
+</script>
+
+</body>
+</html>
