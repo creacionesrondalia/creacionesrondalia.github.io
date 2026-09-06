@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="./favicon.ico" />
 
     <!-- ===== TAILWIND CSS v4.3.3 ===== -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
 
     <!-- ===== FUENTES GOOGLE ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -215,31 +216,6 @@
             color: white;
         }
 
-        .modal-img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px 20px 0 0;
-        }
-
-        /* ============================================
-                   SECCIONES
-                   ============================================ */
-        .section-padding {
-            padding: 60px 16px;
-        }
-
-        @media (min-width: 768px) {
-            .section-padding {
-                padding: 80px 32px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .section-padding {
-                padding: 100px 40px;
-            }
-        }
-
         /* ============================================
                    MENÚ MÓVIL
                    ============================================ */
@@ -269,6 +245,32 @@
         }
 
         /* ============================================
+                   SECCIONES
+                   ============================================ */
+        .section-padding {
+            padding: 60px 16px;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 80px 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding: 100px 40px;
+            }
+        }
+
+        /* ============================================
+                   SCROLL SUAVE
+                   ============================================ */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ============================================
                    TARJETAS DE PRODUCTOS
                    ============================================ */
         .product-card {
@@ -281,13 +283,6 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
-        }
-
-        /* ============================================
-                   SCROLL SUAVE
-                   ============================================ */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -457,7 +452,7 @@ SECCIÓN CATÁLOGO
         <!-- Carrusel -->
         <div class="carousel-container rounded-2xl shadow-2xl mb-6 md:mb-8">
             <div id="carouselSlide" class="carousel-slide">
-                <img src="./src/img/foto5.jpeg" alt="Producto 1" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
+                <img src="./src/img/foto1.jpeg" alt="Producto 1" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto2.jpeg" alt="Producto 2" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto3.jpeg" alt="Producto 3" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
                 <img src="./src/img/foto4.jpeg" alt="Producto 4" class="carousel-item h-64 sm:h-80 md:h-96 lg:h-[500px]" />
@@ -797,30 +792,4 @@ JAVASCRIPT
     }
 
     // ==========================================
-    // RESALTAR ENLACE ACTIVO EN NAVEGACIÓN
-    // ==========================================
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a:not([href="#"])');
-
-    window.addEventListener('scroll', function() {
-        let current = '';
-        sections.forEach(function(section) {
-            const sectionTop = section.offsetTop - 120;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(function(link) {
-            const href = link.getAttribute('href');
-            if (href === '#' + current) {
-                link.style.color = '#8B4513';
-            } else {
-                link.style.color = '#374151';
-            }
-        });
-    });
-</script>
-
-</body>
-</html>
+   
